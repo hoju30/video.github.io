@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>看影片</title>
+   
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-header">
+            <header>輸入密碼看影片</header>
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" id="password" placeholder="密碼" autocomplete="off" required>
+        </div>
+        <div class="error-message" id="error-message"></div>
+        <div class="input-submit">
+            <button class="submit-btn" id="submit" style="color:aliceblue;font-size: medium;">確認</button>
+        </div>
+       
+    </div>
+
+    <script>
+        const submitButton = document.getElementById('submit');
+        const passwordInput = document.getElementById('password');
+        const errorMessage = document.getElementById('error-message');
+
+        submitButton.addEventListener('click', function() {
+            const password = passwordInput.value;
+
+            if (password === 'aud770') {
+                window.location.href = 'video.html';
+            } else {
+                errorMessage.textContent = '密碼錯誤，請再試一次。';
+            }
+        });
+
+        passwordInput.addEventListener('focus', function() {
+            errorMessage.textContent = '';
+        });
+    </script>
+</body>
+</html>

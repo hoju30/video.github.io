@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP4影片嵌入範例</title>
+    <style>
+        /* 確保 body 和 html 的邊距為0 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        /* 設定視頻容器的樣式 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+        /* 設定視頻的樣式，使其填滿容器 */
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video controls>
+            <source src="pp.mp4" type="video/mp4">
+            您的瀏覽器不支援視頻播放。
+        </video>
+    </div>
+</body>
+</html>
